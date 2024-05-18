@@ -10,6 +10,7 @@
   flex-direction: column;
   padding: 28px;
   color: $color-text;
+  background-color: $color-primary;
 
   .section-one{
     display: flex;
@@ -70,6 +71,62 @@
       font-weight: 500;
       font-style: normal;
       margin-bottom: 24px;
+    }
+
+    .table{
+      display: flex;
+      flex-direction: column;
+      border-radius: 25px;
+      padding: 24px;
+      background-color: $color-white;
+      margin-bottom: 30px;
+
+      .row{
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+
+        &:not(:first-child) {
+          margin-top: 16px;
+        }
+
+        &:not(:last-child) {
+          padding-bottom: 16px;
+          border-bottom: 1px solid $color-gray;
+        }
+
+        .date{
+          font-family: "Inter", sans-serif;
+          font-size: 14px;
+          font-weight: 600;
+          color: $color-gray2;
+          display: flex;
+          flex-direction: column;
+          width: 100px;
+          justify-content: center;
+        }
+
+        .data{
+          font-family: "Inter", sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          display: flex;
+          justify-content: space-between;
+          gap: 30px;
+
+          .systolic, .diastolic, .pulse{
+            span:first-child{
+              color: $color-gray2;
+              font-weight: 500;
+              margin-right: 6px;
+            }
+          }
+        }
+
+
+      }
     }
 
 

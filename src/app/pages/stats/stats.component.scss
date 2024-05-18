@@ -1,0 +1,89 @@
+@import "../../global.scss";
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  color: $color-text;
+  background-color: $color-primary;
+
+  .section-one {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    .title {
+      font-family: "Calistoga", serif;
+      font-size: 32px;
+      font-weight: 400;
+      font-style: normal;
+      margin-bottom: 16px;
+    }
+  }
+
+  .section-two {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-family: "Calistoga", serif;
+      font-size: 24px;
+      font-weight: 500;
+      font-style: normal;
+      margin-bottom: 24px;
+    }
+
+    .table {
+      display: flex;
+      flex-direction: column;
+      border-radius: 25px;
+      padding: 24px;
+      background-color: $color-white;
+      margin-bottom: 30px;
+
+      .row {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+
+        &:not(:first-child) {
+          margin-top: 16px;
+        }
+
+        &:not(:last-child) {
+          padding-bottom: 16px;
+          border-bottom: 1px solid $color-gray;
+        }
+
+        &.header {
+          .category, .systolic, .diastolic {
+            color: $color-text;
+            font-weight: 800;
+          }
+        }
+
+        .category, .systolic, .diastolic {
+          flex: 1;
+          text-align: center;
+          font-family: "Inter", sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          font-style: normal;
+          color: $color-gray2;
+        }
+
+        .systolic, .diastolic {
+          color: $color-text;
+        }
+
+      }
+    }
+  }
+}

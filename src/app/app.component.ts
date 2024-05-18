@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
       setTimeout(() => {
         this.showSplash = false;
       }, 1000); // Tiempo de la animación de fade-out
-    }, 500); // Tiempo que dura el splash screen visible
+    }, 300); // Tiempo que dura el splash screen visible
   }
 
 }
