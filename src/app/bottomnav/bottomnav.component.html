@@ -1,0 +1,22 @@
+<div class="bottom-nav">
+  <button routerLink="/home" routerLinkActive="active" >
+    <mat-icon class="material-symbols-rounded">home</mat-icon>
+    <span>Home</span>
+  </button>
+  <button routerLink="/stats" routerLinkActive="active">
+    <mat-icon class="material-symbols-rounded">query_stats</mat-icon>
+    <span>Stats</span>
+  </button>
+  <button (click)="onAdd()">
+    <mat-icon class="material-symbols-rounded">add</mat-icon>
+    <span>Add</span>
+  </button>
+  <button routerLink="/board" routerLinkActive="active">
+    <mat-icon class="material-symbols-rounded">content_paste</mat-icon>
+    <span>Board</span>
+  </button>
+  <button routerLink="/profile" routerLinkActive="active">
+    <mat-icon class="material-symbols-rounded">person</mat-icon>
+    <span>Profile</span>
+  </button>
+</div>
