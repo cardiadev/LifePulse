@@ -18,8 +18,6 @@ main {
   background-color: $color-primary;
 }
 
-
-
 @media (max-width: $breakpoint-lg) {
   main{
   }
@@ -34,4 +32,9 @@ main {
 
   main{
   }
+}
+
+.my-outlined-dialog mat-dialog-container {
+  padding: 0;
+  border-radius: 10px !important;
 }

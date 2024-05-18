@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AddModalComponent } from '../add-modal/add-modal.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-bottomnav',
@@ -8,7 +10,18 @@ import { Component } from '@angular/core';
 export class BottomnavComponent {
 
 
-  onAdd() {
-    console.log('Add');
+  constructor(public dialog: MatDialog) { }
+
+  onAdd(): void {
+    const dialogRef = this.dialog.open(AddModalComponent, {
+      width: '400px',
+      height: '520px',
+      panelClass: "confirmation-modal",
+
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 }

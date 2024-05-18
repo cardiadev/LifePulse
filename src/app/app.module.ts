@@ -14,6 +14,8 @@ import { BoardComponent } from './pages/board/board.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AddModalComponent } from './add-modal/add-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -24,17 +26,19 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     StatsComponent,
     BoardComponent,
     ProfileComponent,
-    SplashScreenComponent
+    SplashScreenComponent,
+    AddModalComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatIconModule,
+    MatDialogModule,
     AppRoutingModule
   ],
   providers: [
     provideAnimationsAsync()
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
